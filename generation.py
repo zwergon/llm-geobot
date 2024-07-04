@@ -11,7 +11,7 @@ logger = logging.getLogger("flask_app")
 
 @app.route('/')
 def home():
-    return "Welcome to the text generation API. Use /generate to generate text."
+    return "Welcome to the text generation API. Use /chat/generate to generate text."
 
 
 @app.route('/generate', methods=['POST'])
@@ -41,4 +41,4 @@ def generate():
     return jsonify({'text': response})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8501)
+    app.run(host='0.0.0.0', port=7860)
